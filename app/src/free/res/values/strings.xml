@@ -2,4 +2,6 @@
 <resources>
     <string name="hello_world">Hello World from free!</string>
     <string name="ad_unit_id">ca-app-pub-9492461501319298/1111508963</string>
+    <string name="instructions">Press the button for a delicious joke!</string>
+    <string name="button_text">Tell Joke</string>
 </resources>
