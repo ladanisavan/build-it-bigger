@@ -1,5 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.JokeTeller;
+import com.udacity.gradle.builditbigger.jokesdisplaylib.JokeDisplayActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke() {
-        Toast.makeText(this, JokeTeller.getRandomJoke(), Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, JokeTeller.getRandomJoke(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, JokeDisplayActivity.class);
+        intent.putExtra(JokeDisplayActivity.INTENT_JOKE, JokeTeller.getRandomJoke());
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
