@@ -29,7 +29,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(":jokeslib")
+   // compile project(":jokeslib")
     compile project(":jokesdisplaylib")
     testCompile 'junit:junit:4.12'
     freeCompile 'com.google.android.gms:play-services-ads:8.4.0'
